@@ -186,12 +186,12 @@ birthMonthsJson: `{
 
 
     randomSurname: function () {
-        let surnamesJson = this.surnameJson;
+        let surnamesJson = this.randomValue(this.surnameJson);
         if (this.person.gender === this.GENDER_FEMALE) {
-            surnamesJson = surnamesJson.replace(/в/g, 'ва').replace(/н$/g, 'на');
+            surnamesJson = surnamesJson.replace(/в(?=$)/g, 'ва').replace(/н$/g, 'на');
         }
         console.log(typeof(surnamesJson))
-        return this.randomValue(surnamesJson);
+        return surnamesJson;
     },
 
 
