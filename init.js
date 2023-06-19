@@ -25,4 +25,4 @@ function clearPerson() {
     document.getElementById('birthYearOutput').textContent = '';
     document.getElementById('professionOutput').textContent = '';
     document.getElementById('patronymicNameOutput').textContent = '';
-}
+};
